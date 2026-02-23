@@ -58,6 +58,8 @@ pyinstaller --onefile --noconsole Card_draw_simulator.py
 - **随机抽一张牌**: 随机抽取一张未抽过的牌
 - **重置按钮**: 清空所有抽取记录，恢复初始状态
 
+![主界面](./README.assets/main-interface.png)
+
 ## 卡牌排序规则
 
 程序按照特定的顺序排列卡牌：
@@ -97,6 +99,8 @@ pyinstaller --onefile --noconsole Card_draw_simulator.py
   大王
   小王
   ```
+
+![导入麻将](./README.assets/load-majiang.png)
 
 ## 依赖库
 
