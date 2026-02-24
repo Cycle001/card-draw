@@ -68,12 +68,12 @@ class CardDrawer:
         toolbar_frame.pack(fill=tk.X, pady=(0, 10))
         
         # 卡组选择下拉菜单
-        tk.Label(toolbar_frame, text="卡组:", font=("Arial", 10), 
+        tk.Label(toolbar_frame, text="卡组:", font=("Noto Sans", 10), 
                 bg="#e0e0e0").pack(side=tk.LEFT, padx=(10, 5))
         
         self.group_var = tk.StringVar()
         self.group_dropdown = tk.OptionMenu(toolbar_frame, self.group_var, "")
-        self.group_dropdown.config(font=("Arial", 10), width=15)
+        self.group_dropdown.config(font=("Noto Sans", 10), width=15)
         self.group_dropdown.pack(side=tk.LEFT, padx=5)
         
         # 绑定下拉菜单选择事件
@@ -84,7 +84,7 @@ class CardDrawer:
             toolbar_frame,
             text="增加卡组",
             command=self.add_card_group,
-            font=("Arial", 10),
+            font=("Noto Sans", 10),
             bg="#4CAF50",
             fg="white",
             padx=10,
@@ -98,7 +98,7 @@ class CardDrawer:
             toolbar_frame,
             text="删除卡组",
             command=self.delete_card_group,
-            font=("Arial", 10),
+            font=("Noto Sans", 10),
             bg="#f44336",
             fg="white",
             padx=10,
@@ -113,7 +113,7 @@ class CardDrawer:
             toolbar_frame,
             text="修改卡组",
             command=self.enable_edit_mode,
-            font=("Arial", 10),
+            font=("Noto Sans", 10),
             bg="#2196F3",
             fg="white",
             padx=10,
@@ -127,7 +127,7 @@ class CardDrawer:
             toolbar_frame,
             text="保存卡组",
             command=self.save_and_exit_edit_mode,
-            font=("Arial", 10),
+            font=("Noto Sans", 10),
             bg="#FF9800",
             fg="white",
             padx=10,
@@ -142,7 +142,7 @@ class CardDrawer:
             toolbar_frame,
             text="载入卡组",
             command=self.load_card_group,
-            font=("Arial", 10),
+            font=("Noto Sans", 10),
             bg="#9C27B0",
             fg="white",
             padx=10,
@@ -156,7 +156,7 @@ class CardDrawer:
             toolbar_frame,
             text="导出卡组",
             command=self.export_card_group,
-            font=("Arial", 10),
+            font=("Noto Sans", 10),
             bg="#795548",
             fg="white",
             padx=10,
@@ -169,7 +169,7 @@ class CardDrawer:
         self.status_label = tk.Label(
             toolbar_frame,
             text="当前: 完整扑克牌组 (54张)",
-            font=("Arial", 10, "italic"),
+            font=("Noto Sans", 10, "italic"),
             bg="#e0e0e0",
             fg="#333333"
         )
@@ -532,18 +532,18 @@ class CardDrawer:
         
         # 标题
         tk.Label(self.edit_toolbar_frame, text="编辑模式", 
-                font=("Arial", 10, "bold"), bg="#e0e0e0").pack(side=tk.LEFT, padx=(10, 5))
+                font=("Noto Sans", 10, "bold"), bg="#e0e0e0").pack(side=tk.LEFT, padx=(10, 5))
         
         # 提示标签
         tk.Label(self.edit_toolbar_frame, text="左键多选卡牌，右键打开菜单", 
-                font=("Arial", 9), bg="#e0e0e0", fg="#666666").pack(side=tk.LEFT, padx=5)
+                font=("Noto Sans", 9), bg="#e0e0e0", fg="#666666").pack(side=tk.LEFT, padx=5)
         
         # 删除选中按钮
         self.delete_selected_btn = tk.Button(
             self.edit_toolbar_frame,
             text="删除选中卡牌",
             command=self.delete_selected_cards,
-            font=("Arial", 10),
+            font=("Noto Sans", 10),
             bg="#f44336",
             fg="white",
             padx=10,
@@ -560,7 +560,7 @@ class CardDrawer:
                 self.edit_toolbar_frame,
                 text="恢复默认",
                 command=self.restore_default_group,
-                font=("Arial", 10),
+                font=("Noto Sans", 10),
                 bg="#FF9800",
                 fg="white",
                 padx=10,
@@ -573,7 +573,7 @@ class CardDrawer:
         self.selection_count_label = tk.Label(
             self.edit_toolbar_frame,
             text="已选中: 0 张",
-            font=("Arial", 10),
+            font=("Noto Sans", 10),
             bg="#e0e0e0",
             fg="#333333"
         )
@@ -660,7 +660,7 @@ class CardDrawer:
             add_card_frame,
             text="+",
             command=self.add_new_card,
-            font=("Arial", 14, "bold"),
+            font=("Noto Sans", 14, "bold"),
             width=6,
             height=2,
             bg="#4CAF50",
@@ -693,7 +693,7 @@ class CardDrawer:
         card_btn = tk.Button(
             frame,
             text=card,
-            font=("Consolas", 10, "bold"),
+            font=("Microsoft YaHei", 10, "bold"),
             width=6,
             height=2,
             bg="white",
@@ -950,7 +950,7 @@ class CardDrawer:
         # 标题（不随内容滚动）
         title_label = tk.Label(container,
                             text="所有卡牌（可点击切换状态，灰色表示已抽取）",
-                            font=("Arial", 14), pady=10)
+                            font=("Noto Sans", 14), pady=10)
         title_label.pack()
         
         # 2. 创建滚动容器框架
@@ -1099,7 +1099,7 @@ class CardDrawer:
             parent,
             text=card,
             command=lambda idx=card_index: self.toggle_card(idx),  # 使用索引
-            font=("Consolas", 12, "bold"),
+            font=("Microsoft YaHei", 12, "bold"),
             width=6,
             height=2,
             relief=tk.RAISED,
@@ -1209,7 +1209,7 @@ class CardDrawer:
         tk.Label(
             top_frame,
             text="当前抽到的牌",
-            font=("Arial", 12, "bold"),
+            font=("Noto Sans", 12, "bold"),
             pady=10
         ).pack()
         
@@ -1217,7 +1217,7 @@ class CardDrawer:
         self.current_card_display = tk.Label(
             top_frame,
             text="等待抽牌...",
-            font=("Consolas", 36, "bold"),
+            font=("Microsoft YaHei", 36, "bold"),
             width=8,
             height=4,
             bg="white",
@@ -1236,7 +1236,7 @@ class CardDrawer:
             bottom_frame,
             text="随机抽一张牌",
             command=self.draw_random_card,
-            font=("Arial", 14),
+            font=("Noto Sans", 14),
             bg="#4CAF50",
             fg="white",
             padx=20,
@@ -1253,7 +1253,7 @@ class CardDrawer:
             text="重置",
             command=self.reset,
             state="disabled",
-            font=("Arial", 14),
+            font=("Noto Sans", 14),
             bg="#9E9E9E",
             fg="white",
             padx=20,
